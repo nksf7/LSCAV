@@ -1,117 +1,108 @@
-================================================================================
-
-    LSCAV - Linux Scavenger 0.3 Release
-
-================================================================================
+===============================================================================
+                         LSCAV - Linux Scavenger v0.3
+===============================================================================
 
 Authors:
-
     - Nikola Kipariz Stamov
 
 Contributors:
-
     - Arxangel Kipariz Stamov
 
-================================================================================
+-------------------------------------------------------------------------------
 
 Description:
 
-LSCAV is a purpose built, self contained tool with little to no dependencies, relying solely on system 
-provided resources to ensure simplicity and efficiency; designed for developers, system administrators, and advanced users, it offers an easy-to-compile 
-solution for collecting and analyzing critical system information on Linux environments, enabling effective system management, performance monitoring, troubleshooting 
-and optimization with rapid deployment and minimal setup.
+LSCAV is a purpose-built, self-contained tool with minimal dependencies,
+relying solely on system-provided resources. It is designed for developers,
+system administrators, and advanced users who need:
 
-================================================================================
+    - Fast deployment
+    - Efficient collection of system information
+    - Performance monitoring
+    - Troubleshooting and optimization
+
+With its lightweight design, LSCAV is easy to compile and run across Linux
+environments with minimal setup.
+
+-------------------------------------------------------------------------------
 
 Features:
 
-    - TBD
+    - To Be Determined (TBD)
 
-================================================================================
+-------------------------------------------------------------------------------
 
-Installation
+Installation:
 
-    - Prerequisites
+1. Prerequisites:
+    - C Compiler (e.g., GCC)
+    - Optional: "make" utility for automated building
 
-        - C Compiler [GCC Used by Author]
-        - "make" Utility for Automation & Ease of Use [Optional]
+2. Manual Compilation (GCC):
 
-    - Direct Compilation [GCC]
-
-        Base:
-            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror \
+    Base:
+        gcc -std=c99 -Wall -Wextra -Wpedantic -Werror \
             lscav.c -o lscav_base
 
-        Debug:
-            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -g -O0 \
+    Debug:
+        gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -g -O0 \
             -fno-inline -fno-omit-frame-pointer -fwrapv \
             -fdiagnostics-show-option -fsanitize=undefined,leak,address \
             lscav.c -o lscav_debug
 
-        Release:
-            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -O3 \
+    Release:
+        gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -O3 \
             -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fPIE -pie \
             -fvisibility=hidden -fno-common -fstack-clash-protection -flto \
             -fno-strict-aliasing -funroll-loops -finline-functions -fno-plt \
-            -flto -Wl,-z,relro -Wl,-z,now -Wl,-z,defs -Wl,-z,noexecstack \
+            -Wl,-z,relro -Wl,-z,now -Wl,-z,defs -Wl,-z,noexecstack \
             lscav.c -o lscav_release
 
-    - Automation with "make" Utility
+3. Automated Build (make utility):
 
-        - make
-        - make debug
-        - make release
+    make           # Build base version
+    make debug     # Build debug version
+    make release   # Build optimized release
 
-================================================================================
+-------------------------------------------------------------------------------
 
-Usage
+Usage:
 
-./lscav
+    ./lscav [options]
 
-    [-u List All Users]
-    [-g List All Groups]
-    [-r List Regular Users Only]
-    [-s List System Information]
+Options:
+    -u    List all users
+    -g    List all groups
+    -r    List regular (non-system) users only
+    -s    Display system information
 
-================================================================================
+-------------------------------------------------------------------------------
 
-License
+License:
 
 LSCAV is licensed under the Creative Commons Attribution-NonCommercial
 4.0 International (CC BY-NC 4.0) License.
 
 You are free to:
 
-- Share: Copy, distribute, and transmit the tool, as long as you credit
-  the original author.
+    - Share: Copy and distribute the tool with attribution.
+    - Adapt: Modify or build upon it for non-commercial use.
 
-- Adapt: Remix, transform, and build upon the tool for non-commercial
-  purposes only.
+Restrictions:
 
-The following restrictions apply:
-
-- Non-Commercial Use: Commercial use is prohibited. This includes any
-  use intended for commercial advantage or monetary gain.
-
-- Attribution: Any use or modification of LSCAV must provide appropriate
-  credit to the author, include a link to this license, and clearly
-  indicate if changes were made.
+    - Commercial use is prohibited.
+    - Attribution is required with clear indication of changes.
 
 For Commercial Use:
 
-If you wish to use LSCAV for commercial purposes, please contact the
-author to discuss licensing arrangements and fees. Commercial use is
-not covered under the current license, but special permissions can be
-granted.
+To request a commercial license, please contact the author directly.
+Commercial usage requires special permission and licensing terms.
 
-For more information, visit the CC BY-NC 4.0 License
-(https://creativecommons.org/licenses/by-nc/4.0/).
+For full license details:
+https://creativecommons.org/licenses/by-nc/4.0/
 
-This license ensures that LSCAV remains open for personal, educational,
-and non-commercial use, while safeguarding it from unauthorized
-commercial exploitation.
+-------------------------------------------------------------------------------
 
-If you have any questions, suggestions, or would like to discuss
-licensing for commercial use, feel free to reach out.
+Questions or licensing inquiries? Feel free to reach out to the author.
 
-================================================================================
+===============================================================================
