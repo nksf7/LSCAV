@@ -1,37 +1,29 @@
-== == == == == == == == == == == == == == == == == == == == == == == == == == ==
-    == == == == == == == == == == == == ==
+================================================================================
 
     LSCAV - Linux Scavenger 0.3 Release
 
-    == == == == == == == == == == == == == == == == == == == == == == == == ==
-    == == == == == == == == == == == == == == ==
+================================================================================
 
-    Authors
+Authors:
 
-        - Nikola Kipariz Stamov
+    - Nikola Kipariz Stamov
 
-              Contributors :
+Contributors:
 
     -Arxangel Kipariz Stamov
 
-    == == == == == == == == == == == == == == == == == == == == == == == == ==
-    == == == == == == == == == == == == == == ==
+================================================================================
 
-    Description
+Description:
 
-            LSCAV is a purpose -
-        built,
-    self - contained tool with little to no dependencies,
-    relying solely on system -
-        provided resources to ensure simplicity and efficiency; designed for developers, system administrators, and advanced
-users, it offers an easy-to-compile solution for collecting and analyzing
-critical system information on Linux environments, enabling effective system
-management, performance monitoring, troubleshooting, and optimization with
-rapid deployment and minimal setup.
+LSCAV is a purpose built, self contained tool with little to no dependencies, relying solely on system 
+provided resources to ensure simplicity and efficiency; designed for developers, system administrators, and advanced users, it offers an easy-to-compile 
+solution for collecting and analyzing critical system information on Linux environments, enabling effective system management, performance monitoring, troubleshooting 
+and optimization with rapid deployment and minimal setup.
 
 ================================================================================
 
-Features
+Features:
 
     - TBD
 
