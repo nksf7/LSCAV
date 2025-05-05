@@ -1,0 +1,125 @@
+== == == == == == == == == == == == == == == == == == == == == == == == == == ==
+    == == == == == == == == == == == == ==
+
+    LSCAV - Linux Scavenger 0.3 Release
+
+    == == == == == == == == == == == == == == == == == == == == == == == == ==
+    == == == == == == == == == == == == == == ==
+
+    Authors
+
+        - Nikola Kipariz Stamov
+
+              Contributors :
+
+    -Arxangel Kipariz Stamov
+
+    == == == == == == == == == == == == == == == == == == == == == == == == ==
+    == == == == == == == == == == == == == == ==
+
+    Description
+
+            LSCAV is a purpose -
+        built,
+    self - contained tool with little to no dependencies,
+    relying solely on system -
+        provided resources to ensure simplicity and efficiency; designed for developers, system administrators, and advanced
+users, it offers an easy-to-compile solution for collecting and analyzing
+critical system information on Linux environments, enabling effective system
+management, performance monitoring, troubleshooting, and optimization with
+rapid deployment and minimal setup.
+
+================================================================================
+
+Features
+
+    - TBD
+
+================================================================================
+
+Installation
+
+    - Prerequisites
+
+        - C Compiler [GCC Used by Author]
+        - "make" Utility for Automation & Ease of Use [Optional]
+
+    - Direct Compilation [GCC]
+
+        Base:
+            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror \
+            lscav.c -o lscav_base
+
+        Debug:
+            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -g -O0 \
+            -fno-inline -fno-omit-frame-pointer -fwrapv \
+            -fdiagnostics-show-option -fsanitize=undefined,leak,address \
+            lscav.c -o lscav_debug
+
+        Release:
+            gcc -std=c99 -Wall -Wextra -Wpedantic -Werror -O3 \
+            -fstack-protector-strong -D_FORTIFY_SOURCE=3 -fPIE -pie \
+            -fvisibility=hidden -fno-common -fstack-clash-protection -flto \
+            -fno-strict-aliasing -funroll-loops -finline-functions -fno-plt \
+            -flto -Wl,-z,relro -Wl,-z,now -Wl,-z,defs -Wl,-z,noexecstack \
+            lscav.c -o lscav_release
+
+    - Automation with "make" Utility
+
+        - make
+        - make debug
+        - make release
+
+================================================================================
+
+Usage
+
+./lscav
+
+    [-u List All Users]
+    [-g List All Groups]
+    [-r List Regular Users Only]
+    [-s List System Information]
+
+================================================================================
+
+License
+
+LSCAV is licensed under the Creative Commons Attribution-NonCommercial
+4.0 International (CC BY-NC 4.0) License.
+
+You are free to:
+
+- Share: Copy, distribute, and transmit the tool, as long as you credit
+  the original author.
+
+- Adapt: Remix, transform, and build upon the tool for non-commercial
+  purposes only.
+
+The following restrictions apply:
+
+- Non-Commercial Use: Commercial use is prohibited. This includes any
+  use intended for commercial advantage or monetary gain.
+
+- Attribution: Any use or modification of LSCAV must provide appropriate
+  credit to the author, include a link to this license, and clearly
+  indicate if changes were made.
+
+For Commercial Use:
+
+If you wish to use LSCAV for commercial purposes, please contact the
+author to discuss licensing arrangements and fees. Commercial use is
+not covered under the current license, but special permissions can be
+granted.
+
+For more information, visit the CC BY-NC 4.0 License
+(https://creativecommons.org/licenses/by-nc/4.0/).
+
+This license ensures that LSCAV remains open for personal, educational,
+and non-commercial use, while safeguarding it from unauthorized
+commercial exploitation.
+
+If you have any questions, suggestions, or would like to discuss
+licensing for commercial use, feel free to reach out.
+
+================================================================================
