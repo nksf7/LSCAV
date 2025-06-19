@@ -35,7 +35,7 @@ release: lscav.c
 
 # Clean Build Artifacts
 clean:
-	rm -f lscav_base lscav_debug lscav_release
+	rm -f lscav lscav_base lscav_debug lscav_release
 
 # Phony Targets (Avoid conflicts with filenames)
 .PHONY: all clean debug release
