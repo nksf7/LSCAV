@@ -1,6 +1,10 @@
+LSCAV.kdev4
 .vscode
+.kdev4
 
 lscav
 lscav_base
 lscav_debug
 lscav_release
+
+
