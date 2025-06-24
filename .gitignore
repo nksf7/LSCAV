@@ -1,6 +1,6 @@
 LSCAV.kdev4
 .vscode
-.kdev4
+.kdev4/*
 
 lscav
 lscav_base
