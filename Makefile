@@ -21,7 +21,7 @@ LDFLAGS_PROD = -flto -Wl,-z,relro -Wl,-z,now -Wl,-z,defs -Wl,-z,noexecstack
 # Default Target: Builds the 'lscav' executable in the base directory
 all: lscav
 
-# Compile the source file into the executable (using base flags)
+# Compile the source file into an executable (using base flags)
 lscav: lscav.c
 	$(CC) $(CFLAGS_BASE) lscav.c -o lscav_base
 
