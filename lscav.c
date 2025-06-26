@@ -18,7 +18,7 @@ int MAX_USERS = 0; // Discovery - User Limit
 #include <string.h>      // String Functions
 #include <sys/types.h>   // Defines System Data Types
 #include <sys/utsname.h> // System Information
-#include <unistd.h>      // POSIX System Calls
+#include <unistd.h>      // POSIX System Callss
 
 // Function Prototypes
 
